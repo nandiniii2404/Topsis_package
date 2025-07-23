@@ -25,8 +25,8 @@ It is especially useful in areas like:
 - Simple and clean API
 - Accepts CSV or pandas DataFrame input
 - Supports weighted and normalized decision matrices
+- Command-line interface support
 - Generates final rankings of alternatives
-
 ---
 
 ## 📦 Installation
@@ -34,17 +34,26 @@ It is especially useful in areas like:
 Install the package directly from [PyPI](https://pypi.org):
 
 ```bash
-pip install topsis-nandini
+pip install topsis-nandini==0.1.3
 ```
 
 ## 🛠️ Usage
+
 ```bash
-# 1. Run via Python module
-python -m topsis data.csv "0.4,0.3,0.3" "+,-,+"
+# 1. Command Line Interface
+Once installed, you can use `topsis` as a CLI tool:
+Topsis-nandini input.csv "0.3,0.5,0.2" "+,+,-" output.csv
+
+This will:
+Read data from input.csv
+Apply weights 0.3,0.5,0.2
+Apply impacts +,+,-
+Write ranked output to output.csv
+
 
 # 2. Use inside Python script
-from topsis import topsis
-topsis.run("data.csv", "0.4,0.3,0.3", "+,-,+")
+from topsis_package.topsis import topsis
+topsis("data.csv", "0.4,0.3,0.3", "+,-,+", "result.csv")
 ```
 
 ## 📁 Project Structure
@@ -52,8 +61,8 @@ topsis.run("data.csv", "0.4,0.3,0.3", "+,-,+")
 Topsis_package/
 │
 ├── topsis
-│ ├── init.py 
-│ ├── main.py 
+│ ├── _init_.py 
+│ ├── _main_.py 
 │ └── topsis.py 
 ├── README.md 
 ├── LICENSE 
