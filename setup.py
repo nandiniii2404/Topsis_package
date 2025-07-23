@@ -24,7 +24,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'topsis=topsis_package.__main__:main'
+            'topsis=Topsis_package.__main__:main'
         ]
     },
     classifiers=[
