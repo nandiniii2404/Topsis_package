@@ -34,7 +34,7 @@ It is especially useful in areas like:
 Install the package directly from [PyPI](https://pypi.org):
 
 ```bash
-pip install topsis-nandini==0.1.3
+pip install topsis-nandini==0.1.11
 ```
 
 ## 🛠️ Usage
@@ -42,7 +42,7 @@ pip install topsis-nandini==0.1.3
 ```bash
 # 1. Command Line Interface
 Once installed, you can use `topsis` as a CLI tool:
-Topsis-nandini input.csv "0.3,0.5,0.2" "+,+,-" output.csv
+topsis input.csv "0.3,0.5,0.2" "+,+,-" output.csv
 
 This will:
 Read data from input.csv
@@ -52,17 +52,20 @@ Write ranked output to output.csv
 
 
 # 2. Use inside Python script
-from topsis_package.topsis import topsis
-topsis("data.csv", "0.4,0.3,0.3", "+,-,+", "result.csv")
+pip install topsis-nandini
+!topsis input.csv "0.3,0.5,0.2" "+,+,-" output.csv
 ```
+
+## Example:
+<img width="1540" height="440" alt="Screenshot 2025-07-24 145432" src="https://github.com/user-attachments/assets/48ae7be7-fb09-454e-aecf-29c6dca1e999" />
 
 ## 📁 Project Structure
 ```bash
-Topsis_package/
+topsis_nandini/
 │
 ├── topsis
-│ ├── _init_.py 
-│ ├── _main_.py 
+│ ├── __init__.py 
+│ ├── __main__.py 
 │ └── topsis.py 
 ├── README.md 
 ├── LICENSE 
@@ -71,4 +74,5 @@ Topsis_package/
 ```
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 
